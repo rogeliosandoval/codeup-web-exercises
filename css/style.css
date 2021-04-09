@@ -1,0 +1,33 @@
+.fancy-header {
+    color: grey;
+    text-decoration: underline;
+}
+
+h2 {
+    color: red;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #49add2;
+    background-image: url("../img/random3.jpeg");
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+ul, li {
+    list-style: square;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: rebeccapurple;
+}
+
+a:hover {
+    color: darkturquoise;
+}
+

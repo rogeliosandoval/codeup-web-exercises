@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+    <h1>Register With Us</h1>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+
+    <label for="email">Email</label>
+        <input id="email" name="email" type="text" placeholder="email">
+        <br>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="password">
+        <br>
+
+        <input type="submit">
+
+        <p><label><strong>Bio</strong></label></p>
+        <textarea id="body-text" name="bio" cols="30" rows="10" placeholder="Tell us about yourself"></textarea>
+        <br>
+
+        <label><h2>How did you hear about us?</h2></label>
+
+        <input name="multi-choice" id="choice-a" value="A" type="radio">
+        <label for="choice-a">billboard</label>
+        <br>
+
+        <input name="multi-choice" id="choice-b" value="B" type="radio">
+        <label for="choice-b">radio advertisement</label>
+        <br>
+
+        <input name="multi-choice" id="choice-c" value="C" type="radio">
+        <label for="choice-c">internet advertisement</label>
+        <br>
+
+        <input name="multi-choice" id="choice-d" value="D" type="radio">
+        <label for="choice-d">other</label>
+        <br>
+
+        <label><h2>What Web Browser Are You Using?</h2></label>
+
+        <select id="web-browser">
+            <option value="firefox">Firefox</option>
+            <option value="Chrome">Chrome</option>
+            <option value="Safari">Safari</option>
+            <option value="Internet Explorer">Internet Explorer</option>
+        </select>
+        <br>
+        <label><h2>Would you like to sign up for the newsletter?</h2></label>
+        <input name="newsletter_signup" value="true" type="checkbox" checked>Sign Up For The Email Newsletter
+        <p><button type="submit">Lets GO!</button></p>
+    </form>
+</body>
+</html>
