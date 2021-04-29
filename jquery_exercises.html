@@ -3,11 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>JQuery</title>
+    <script src="js/jquery-3.6.0.min.js"</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
 <script>
-    alert("the DOM has finished loading");
+    window.onload = function(){
+        alert( 'The page finished loading');
+    }
+</script>
+
+<h1>Turtles</h1>
+<div class="important">
+    <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.</p>
+</div>
+<p class="important">This is also very important</p>
+
+<h1>Birds</h1>
+<div>
+    <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.</p>
+</div>
+
+<h1 class="gato">Cats</h1>
+<div>
+    <p>Cats are pretty chill but sometimes they can be mean!</p>
+</div>
+
+<h1 id="doggo">Dogs</h1>
+<div>
+    <ul>
+        <li>Mastiff</li>
+        <li>Pug</li>
+        <li>Shepard</li>
+        <li>Corgi</li>
+    </ul>
+</div>
+<script>
+    var holdUp = $('h1').each(function(){
+        alert($(this).html());
+    })
+    alert(holdUp);
+    // var contents = $('#doggo').html();
+    // alert(contents);
+
+    $('.important').css('background-color', 'yellow');
+
+    $('p').css('font-size', '30px');
+
+    $('.gato').css('background-color', 'blue');
+
+    $('li').css('font-size', '20px',).css('border','solid red 1px');
+
 </script>
 </body>
 </html>
