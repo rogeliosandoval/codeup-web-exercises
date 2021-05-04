@@ -39,20 +39,34 @@
     </ul>
 </div>
 <script>
-    var holdUp = $('h1').each(function(){
-        alert($(this).html());
+    // var holdUp = $('h1').each(function(){
+    //     alert($(this).html());
+    // })
+    // alert(holdUp);
+    // // var contents = $('#doggo').html();
+    // // alert(contents);
+    //
+    // $('.important').css('background-color', 'yellow');
+    //
+    // $('p').css('font-size', '30px');
+    //
+    // $('.gato').css('background-color', 'blue');
+    //
+    // $('li').css('font-size', '20px',).css('border','solid red 1px');
+
+    $('h1').click(function (){
+        $(this).css('background-color', 'yellow');
     })
-    alert(holdUp);
-    // var contents = $('#doggo').html();
-    // alert(contents);
 
-    $('.important').css('background-color', 'yellow');
+    $('p').dblclick(function(){
+        $(this).css('font-size', '18px');
+    })
 
-    $('p').css('font-size', '30px');
-
-    $('.gato').css('background-color', 'blue');
-
-    $('li').css('font-size', '20px',).css('border','solid red 1px');
+    $('li').hover(function() {
+        $(this).css('color', 'red')
+    }, function() {
+        $(this).css('color', 'black')
+    });
 
 </script>
 </body>

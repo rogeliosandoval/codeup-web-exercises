@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    #header {
+        text-align: center;
+        color: red;
+        font-size: xxx-large;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code Exercise</title>
+</head>
+
+<body>
+<h1 id="header">Konami Code</h1>
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<script>
+    "use strict";
+    var konamiCode = "";
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+        konamiCode += (event.keyCode);
+        setTimeout(function(){
+        }, 3000);
+
+        if (konamiCode === '3838404037393739666513') {
+            alert("You have added 30 lives!");
+            $('body').css('background-image', 'url(img/roll.gif');
+        }
+
+    });
+</script>
+
+<!--<audio autoplay>-->
+<!--    <source src="audio/roll.mp3" type="audio/mp3">-->
+<!--</audio>--
+
+</body>
