@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<style>
+
+    #experience, #workPage, #normal {
+        font-size: 1em;
+        padding: 10px;
+        color: #fff;
+        border: 2px solid #06D85F;
+        border-radius: 20px/50px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        background-color: darkblue;
+    }
+
+    .invisible {
+        visibility: hidden;
+    }
+
+    .highlight {
+        background-color: yellow;
+    }
+
+    html {
+        background: url('https://wallpapercave.com/wp/wp3589868.jpg') no-repeat center fixed;
+        background-size: cover;
+    }
+
+    .content {
+        max-width:700px;
+        margin:auto;
+    }
+
+    .hotPink {
+        color: hotpink;
+    }
+
+    .hotpink2{
+        background: url("https://thumbs.gfycat.com/AdmirableDemandingGoitered-max-1mb.gif") no-repeat center fixed;
+    background-size: cover;
+    }
+
+    .goku{
+        font-family: chalkboard, sans-serif;
+        color: black;
+    }
+
+    .goku2{
+        background: url("https://wallpaperforu.com/wp-content/uploads/2020/06/jocker-wallpaper-200611170910101600x1200.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+
+    .david{
+        font-family: comic, sans-serif;
+        color: white;
+    }
+
+    .david2{
+        background: url("https://thumbs.gfycat.com/AggravatingSecondaryHousefly-max-1mb.gif") no-repeat center fixed;
+        background-size: cover;
+    }
+
+    #code{
+        width: 500px;
+        height: 300px;
+    }
+
+    #pop, #parse, #pink {
+        font-size: 1em;
+        padding: 10px;
+        color: #fff;
+        border: 2px solid #06D85F;
+        border-radius: 20px/50px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        background-color: black;
+    }
+
+</style>
+
+<body>
+    <center>
+
+    <div class="content">
+    <h1>Welcome To My CodeUp Practice Website!</h1>
+
+    <h2>How is my experience at CodeUp?</h2>
+    <p id="firstp">It's been a roller coaster of different languages and methods but I am doing my best to keep up with everything as we power through them! Having class remotely is not as bad as I thought it would be, in fact I love being able to sleep in as much as I can and be able to go straight to class. As far as the material we are learning I am enjoying them for the most part. It's very important to acknowledge my weaknesses and make sure I take the time to go over them. In the end, my experience at CodeUp has been good and I'm excited to see what I can accomplish in the future!</p>
+
+        <button id="experience">Highlight my experience!</button>
+
+    <h3 id="weakness">What are my weaknesses? (click HERE to find out)</h3>
+        <ul id="weaknesses">
+            <li>Bootstrap</li>
+            <li>Objects</li>
+            <li>DOM</li>
+            <li>Asking Questions</li>
+        </ul>
+
+    <h3 id="strength">What are my strengths? (click HERE to find out)</h3>
+        <ul id="strengths">
+            <li>HTML</li>
+            <li>jQuery(maybe)</li>
+            <li>CSS</li>
+            <li>Listening</li>
+        </ul>
+
+        <form action="PracticeWebsite2.html">
+            <button id="workPage">What was I doing before CodeUp?</button>
+        </form>
+<br>
+        <form action="PracticeWebsite3.html">
+            <button id="workPage">My Transformation</button>
+        </form>
+
+        <h1>How did hear about CodeUp?</h1>
+        <p>I first heard about CodeUp from an old high school friend but did not think anything of it. A couple years later I heard it from my girlfriend who gave me more of an insight.</p>
+
+        <img src="https://s.hdnux.com/photos/76/01/36/16258989/7/rawImage.jpg" id="code">
+        <br>
+        <br>
+        <h1>Change Theme</h1>
+        <button id="normal">Back To Normal</button>
+        <br>
+        <br>
+        <button id="pop">Jay Style!</button>
+        <button id="pink">Javier Style!</button>
+        <button id="parse">David Style!</button>
+
+    <script>
+
+        $('ul').toggleClass('invisible');
+
+        $('#weakness').click(function(){
+            $('#weaknesses').toggleClass('invisible');
+        })
+
+        $('#strength').click(function(){
+            $('#strengths').toggleClass('invisible');
+        })
+
+        $('#experience').click(function(){
+            $('#firstp').toggleClass('highlight');
+        })
+
+        $('#pink').click(function(){
+            $('html').toggleClass('hotPink').toggleClass('hotpink2');
+            alert("LETS GET LOOPY");
+        })
+
+        $('#pop').click(function(){
+            $('html').toggleClass('goku').toggleClass('goku2');
+            alert("Give me a cupdate everyone!")
+        })
+
+        $('#normal').click(function(){
+            $('html').removeClass();
+        })
+
+        $('#parse').click(function(){
+            $('html').toggleClass('david').toggleClass('david2');
+            alert("PARSE YOUR SSTUFFF")
+        })
+
+
+
+    </script>
+
+    </div>
+    </center>
+</body>
+</html>

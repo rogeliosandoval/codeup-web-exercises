@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 3</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<style>
+
+    .invisible {
+        visibility: hidden;
+    }
+
+    .content {
+        max-width:700px;
+        margin:auto;
+    }
+
+    html {
+        background: url('https://pixy.org/src/77/776288.jpg') no-repeat center fixed;
+        background-size: cover;
+    }
+
+    h1{
+        color: white;
+        font-size: xxx-large;
+    }
+
+    p{
+        color: white;
+        font-size: x-large;
+    }
+
+    #fat {
+        width: 300px;
+        height: 300px;
+    }
+
+    #skinny{
+        width: 325px;
+        height: 300px;
+    }
+
+    #fat2 {
+        width: 300px;
+        height: 300px;
+    }
+
+    #skinny2{
+        width: 300px;
+        height: 300px;
+    }
+</style>
+
+<body>
+<center>
+    <div class = "content">
+        <h1>My TRANSFORMATION</h1>
+        <p>Without going into too much detail I have always been overweight for as long as I could remember. I never felt good physically or mentally and I knew I needed to make a change. Not sure how I was able to manage but I ended up staying motivated and I lost over 136lbs!</p>
+        <img src="img/fat.JPG" id="fat">
+        <img src="img/skinny.jpg" id="skinny">
+        <br>
+        <br>
+        <button id="tranbut">TRANSFORM!</button>
+        <br>
+        <br>
+        <img src="img/fat2.jpg" id="fat2">
+        <img src="img/skinny2.JPG" id="skinny2">
+        <br>
+        <br>
+        <button id="tranbut2">TRANSFORM!</button>
+        <br>
+        <br>
+        <form action="PracticeWebsite.html">
+            <button id="workPage">Back to main page</button>
+        </form>
+
+        <script>
+            $('h1').css('color', 'lightblue');
+
+            $('#skinny').toggleClass('invisible');
+
+            $('#skinny2').toggleClass('invisible');
+
+            $('#tranbut').click(function(){
+                $('#skinny').toggleClass('invisible');
+            })
+
+            $('#tranbut2').click(function() {
+                $('#skinny2').toggleClass('invisible');
+            });
+        </script>
+    </div>
+
+</center>
+
+</body>
+</html>

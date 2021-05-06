@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <button id="answers"> Let's see the answers!</button>
+</head>
+
+<style>
+    .invisible {
+        visibility: hidden;
+    }
+
+    .highlight {
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <p>10 FAQ About National Parks:</p>
+
+    <dl>
+        <dt>Are dogs allowed?</dt>
+        <dd class="invisible">Yessir, dogs are allowed just make sure you pick up after them and we all good you feel me?</dd>
+
+        <dt>Are cats allowed?</dt>
+        <dd class="invisible">No.</dd>
+
+        <dt>Can I take pictures?</dt>
+        <dd class="invisible">Of course you can! It's part of your rights that is protected by the first amendment!</dd>
+
+        <dt>Can I breathe?</dt>
+        <dd class="invisible">Yes! With all the different kinds of trees national parks provide you will be provided with a lot of oxygen.</dd>
+
+        <dt>How much is it?</dt>
+        <dd class="invisible">Depends on what park you're going to.</dd>
+
+        <dt>Are there public restrooms?</dt>
+        <dd class="invisible">Yes, many public restrooms will be provided.</dd>
+
+        <dt>Any food available?</dt>
+        <dd class="invisible">No sir.</dd>
+
+        <dt>Can I bring a guest?</dt>
+        <dd class="invisible">Yes, one guest is allowed per person.</dd>
+
+        <dt>How late do national parks stay open?</dt>
+        <dd class="invisible">It all depends once again on which park you go to.</dd>
+
+        <dt>Do kids get in free?</dt>
+        <dd class="invisible">Sure why not.</dd>
+    </dl>
+
+    <h3>Redwood State National Park</h3>
+        <ul id="theList">
+            <li>Redwood National Park covers a total area of 131,983 acres</li>
+            <li>Redwood was made a national park on October 2, 1968</li>
+            <li>The lowest elevation found in Redwood is 0 feet at the Pacific Ocean</li>
+            <li>Redwood National Park lies in the Pacific time zone</li>
+        </ul>
+
+    <h3>Spring Mountains</h3>
+        <ul id="theList">
+            <li>There are 27 named mountains in the Spring Mountains</li>
+            <li>Most of the high peaks in the Spring Mountains are found in the northern portion of the range</li>
+            <li>Home to over 35 species of tree, the Spring Mountains are said to be the most biologically diverse of all Nevada's mountain ranges</li>
+            <li>The sandstone bluffs of Red Rock Canyon National Conservation Area dominate the middle portion of the Spring Mountains</li>
+        </ul>
+
+    <h3>Hot Springs National Park</h3>
+        <ul id="theList">
+            <li>Hot Springs National Park covers a total area of 5,550 acres</li>
+            <li>The lowest elevation found in Hot Springs is 415 feet at Bull Bayou</li>
+            <li>Hot Springs National Park lies in the Central time zone</li>
+            <li>The number of people visiting Hot Springs in 2019 was 1,467,153</li>
+        </ul>
+
+    <button id="facts">Highlight the FACTS!</button>
+
+<script>
+        $('#answers').click(function () {
+            $('dd').toggleClass('invisible');
+        });
+
+        $('dt').click(function(){
+            $(this).toggleClass("highlight");
+        });
+
+        $('#facts').click(function(){
+            $('ul').each(function(){
+                $(this).children().last().toggleClass('highlight');
+            })
+        });
+
+        $('h3').click(function(){
+            $(this).next().css('font-weight', 'bold');
+        });
+
+        $('li').click(function(){
+            $(this).parent().children('li').css("color", "blue");
+        });
+</script>
+
+</body>
+</html>
