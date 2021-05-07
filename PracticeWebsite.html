@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Practice</title>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <style>
@@ -19,6 +20,10 @@
         cursor: pointer;
         transition: all 0.3s ease-out;
         background-color: darkblue;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     }
 
     .invisible {
@@ -83,6 +88,21 @@
         cursor: pointer;
         transition: all 0.3s ease-out;
         background-color: black;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .cody2{
+        font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+        font-size: 13px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 18.5714px;
+        background: url("https://codeup.com/wp-content/uploads/2018/10/Blog_CodeeDebugging_1200x628.png")no-repeat center fixed;
+        background-size: cover;
     }
 
 </style>
@@ -135,6 +155,9 @@
         <button id="pop">Jay Style!</button>
         <button id="pink">Javier Style!</button>
         <button id="parse">David Style!</button>
+        <br>
+        <br>
+        <img src="https://codeup.com/wp-content/uploads/revslider/footer/codey.png" id="cody">
 
     <script>
 
@@ -142,35 +165,51 @@
 
         $('#weakness').click(function(){
             $('#weaknesses').toggleClass('invisible');
-        })
+        });
 
         $('#strength').click(function(){
             $('#strengths').toggleClass('invisible');
-        })
+        });
 
         $('#experience').click(function(){
             $('#firstp').toggleClass('highlight');
-        })
+        });
 
         $('#pink').click(function(){
             $('html').toggleClass('hotPink').toggleClass('hotpink2');
-            alert("LETS GET LOOPY");
-        })
+            swal("LETS GET LOOPY", "Where's that spider...??", "success");
+        });
 
         $('#pop').click(function(){
             $('html').toggleClass('goku').toggleClass('goku2');
-            alert("Give me a cupdate everyone!")
-        })
+            swal("Give me a cupdate everyone!", "Take a 15 minute break!", "success")
+        });
 
         $('#normal').click(function(){
             $('html').removeClass();
-        })
+        });
 
         $('#parse').click(function(){
             $('html').toggleClass('david').toggleClass('david2');
-            alert("PARSE YOUR SSTUFFF")
-        })
+            swal("Hey You!", "PARSE YOUR SSTUFF", "warning");
+        });
 
+        $('#cody').dblclick(function(){
+            $('html').toggleClass('cody2')
+            swal("Hello! I am Cody the duck!");
+        });
+
+        $('li').hover(function() {
+            $(this).css('color', 'red')
+        }, function() {
+            $(this).css('color', 'black')
+        });
+
+        $('button').hover(function() {
+            $(this).css('color', 'red')
+        }, function() {
+            $(this).css('color', 'white')
+        });
 
 
     </script>
