@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map Marker Example</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+<script src="js/keys.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!-- Mapbox Geocoder Util Methods -->
+<script src="mapbox-geocoder-utils.js"></script>
+
+<!-- Custom JS -->
+<script>
+
+    var accessToken = MAPBOX_ACCESS_TOKEN;
+
+    mapboxgl.accessToken = accessToken;
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    });
+
+    var alamoInfo = {
+        address: "The Alamo",
+        popupHTML: "<p>Remember the Alamo!</p>"
+    };
+
+    function placeMarkerAndPopup(info, token, map) {
+        geocode(info.address, token).then(function(coordinates) {
+            var popup = new mapboxgl.Popup()
+                .setHTML(info.popupHTML);
+            var marker = new mapboxgl.Marker()
+                .setLngLat(coordinates)
+                .addTo(map)
+                .setPopup(popup);
+            popup.addTo(map);
+        });
+    }
+
+    placeMarkerAndPopup(alamoInfo, accessToken, map);
+
+</script>
+</body>
+</html>
