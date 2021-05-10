@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+</head>
+<body>
+<h1>Open the console!</h1>
+
+<h1 class="vesper-libre">Weather Application</h1>
+
+<div id="forecast-days">
+    <div class="date-display" id="day-one-date"></div>
+    <div class="date-display" id="day-two-date"></div>
+    <div class="date-display" id="day-three-date"></div>
+</div>
+<div id="three-day-forecast">
+    <div class="day-card" id="day-one"></div>
+    <div class="day-card" id="day-two"></div>
+    <div class="day-card" id="day-three"></div>
+</div>
+
+<div id='map'></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<script>
+
+    var coordinates = [29.4241, -98.4936];
+    $.get("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + coordinates[0] + "&lon=" + coordinates[1] + "&exclude=current,hourly,minutely&appid=" + WEATHER_MAP_TOKEN)
+        .done(function (resp) {
+            console.log(resp);
+            var today = resp.daily[0];
+            var todayDate = new Date(today.dt * 1000);
+            console.log(todayDate);
+        });
+
+    mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4916, 29.4252], // starting position [lng, lat]
+        zoom: 12 // starting zoom
+    });
+
+
+</script>
+</body>
+</html>
