@@ -41,3 +41,37 @@ function addLoader() {
         });
     }
 }
+
+let newMovie = {
+    "title": $("#movieTitle").val(),
+    "plot": "This is a plot",
+    "actors": "Actor #1, Actor #2"
+};
+
+let postOptions = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newMovie)
+}
+
+$("#addMovie").click(function() {
+    fetch("https://turquoise-youthful-king.glitch.me/movies", postOptions)
+        .then(resp => resp.json())
+        .then(movies => movies);
+    console.log($("#movieTitle").val())
+});
+
+let deleteOptions = {
+    method: 'DELETE',
+    headers: {
+        'Content-Type': 'application/json',
+    }
+};
+
+$("#deleteMovie").click(function(){
+    fetch("https://turquoise-youthful-king.glitch.me/movies/6", deleteOptions)
+        .then(resp => resp.json())
+        .then(movies => console.log(movies));
+});
