@@ -62,7 +62,7 @@ fetch("https://turquoise-youthful-king.glitch.me/movies")
 
 //This function displays that the page is loading while waiting for the JSON to finish.
 function addLoader() {
-    $('body').append('<div id="loadingDiv" style="width:300px;margin:auto;"><img src="img/loading.gif" alt="movie-reel-loading"></div>');
+    $('body').append('<div id="loadingDiv" style="width:300px;margin:auto;"><img src="img/loading-50.gif" alt="movie-reel-loading"></div>');
     $(window).on('load', function () {
         setTimeout(removeLoader, 1500); //wait for page load PLUS two seconds.
     });
