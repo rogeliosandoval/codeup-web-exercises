@@ -4,16 +4,48 @@
     <meta charset="UTF-8">
     <title>Restful API Requests</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/movies.css">
 </head>
 <body>
+
+
+<div style="width:650px;margin:auto;">
+
+    <button id="btnSortAZ">Sort A to Z</button>
+
+    <button id="btnSortZA">Sort Z to A</button>
+
+    <input id="txtSearch" type="Textbox" style="width:260px;" placeholder="Enter search term or blank to reset"/>
+    <button id="btnSearch">Search</button>
+</div>
+
+
 <main id="container"></main>
 
-<form>
-    <input type="Text" id="movieTitle">
-</form>
+<div id="myForm" class="formStyle">
+    <form>
 
-<button id="addMovie">Add the movie</button>
-<button id="deleteMovie">Delete the movie</button>
+        <input type="Text" id="movieTitle" placeholder = "Movie Title">
+        <br>
+        <br>
+        <input type="Text" id="movieGenre" placeholder = "Genre">
+        <br>
+        <br>
+        <textarea id="moviePlot" cols="30" rows="5" placeholder = "Movie Plot"></textarea>
+        <br>
+        <br>
+        <input type="Text" id="movieActors" placeholder = "Actors">
+        <br>
+        <br>
+    </form>
+    <input type="hidden" id="movieId">
+    <button id="addMovie">Add the movie</button>
+    <button id="editMovie" style=display:none;">Edit the movie</button>
+    <button id="editMovieCancel" style=display:none;">Cancel the edit</button>
+    <br>
+
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="js/movies.js"></script>

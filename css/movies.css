@@ -1,0 +1,134 @@
+body {
+    background: black;
+}
+
+h1 {
+    color: yellow;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+}
+
+p {
+    color: snow;
+    text-align: center;
+    margin: 0 10em;
+    font-size: 14px;
+}
+
+form {
+    align-items: center;
+    margin-top: 50px;
+}
+/*visible on bottom of page*/
+#addMovie {
+    background-color: lawngreen;
+    font-size: 1em;
+    padding: 10px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0,255,0,1),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*button on bottom with fields... hidden*/
+#editMovie, .editB {
+    background-color: orange;
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid black;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(232,126,4,1),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*button on bottom with fields... hidden*/
+#editMovieCancel, .deleteB {
+    background-color: red;
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    margin-top: 3em;
+    border: 2px solid black;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(255,0,0,1),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button {
+    background-color: yellowgreen;
+}
+
+hr {
+    background-color: yellow;
+    height: .5em;
+    margin: 3em 200px;
+    box-shadow: 0 12px 16px 0 rgba(255,255,0,1),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.formStyle
+{
+    display:none;
+    width:300px;
+    margin:auto;
+    text-align:center;
+}
+
+#btnSortAZ, #btnSortZA, #btnSearch {
+    background-color: yellow;
+    padding: 10px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(232,126,4,1),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#btnSortAZ:hover, #btnSortZA:hover, #btnSearch:hover, #editMovie:hover, .editB:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    box-shadow: 0 12px 16px 0 #f6b93b,0 17px 50px 0 #f6b93b;
+}
+
+#editMovieCancel:hover, .deleteB:hover {
+    color: black !important;
+    background: darkred;
+    border-color: darkred !important;
+    transition: all 0.4s ease 0s;
+    box-shadow: 0 12px 16px 0 darkred,0 17px 50px 0 darkred;
+}
+
+#addMovie:hover {
+    color: #ffffff !important;
+    background: darkgreen;
+    border-color: darkgreen !important;
+    transition: all 0.4s ease 0s;
+    box-shadow: 0 12px 16px 0 darkgreen,0 17px 50px 0 darkgreen;
+}
+
+#txtSearch {
+    background: lightgoldenrodyellow;
+    border: 2px solid yellow;
+    border-radius: 4px;
+}
