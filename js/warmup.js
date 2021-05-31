@@ -35,5 +35,10 @@ function takesInANumberAndReturnsThePastNumberMultipliedByFive (num) {
 
 console.log(takesInANumberAndReturnsThePastNumberMultipliedByFive(3))
 
+function numberPlusFive (num) {
+    return num + 5;
+}
+
+console.log(numberPlusFive(5));
 
 
