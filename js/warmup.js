@@ -41,4 +41,8 @@ function numberPlusFive (num) {
 
 console.log(numberPlusFive(5));
 
+function numberPlusSeven(num) {
+    return num + 7;
+}
+
 
