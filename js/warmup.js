@@ -45,4 +45,21 @@ function numberPlusSeven(num) {
     return num + 7;
 }
 
+function myNameInCaps(name){
+    return name.toUpperCase();
+}
+
+function myNameInLowerCase(name){
+    return name.toLowerCase();
+}
+
+function sayHello(x){
+    return "Hello, " + x;
+}
+
+console.log(numberPlusSeven(5));
+console.log(myNameInCaps("Roger"));
+console.log(myNameInLowerCase("Bryan"));
+console.log(sayHello("Bill"));
+
 
