@@ -14,6 +14,7 @@
 //         }
 //     }
 // }
+
 //
 // fizzBuzz(30)
 //
@@ -61,5 +62,19 @@ console.log(numberPlusSeven(5));
 console.log(myNameInCaps("Roger"));
 console.log(myNameInLowerCase("Bryan"));
 console.log(sayHello("Bill"));
+
+console.log("Hello my name is Roger!");
+
+var colors = ['red', 'blue', 'green', 'yellow'];
+
+let arrayLength = colors.length
+
+for(let i = 0; i < arrayLength; i++) {
+    if (colors[i] === 'blue') {
+        colors[i] = "I'm blue if I was green I would die";
+    }
+    console.log(colors[i]);
+}
+
 
 
