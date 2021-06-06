@@ -12,17 +12,20 @@
 
 <div style="width:650px;margin:auto;">
 
-    <button id="btnSortAZ">Sort A to Z</button>
+    <button id="btnSortAZ">Sort A/Z</button>
 
-    <button id="btnSortZA">Sort Z to A</button>
+    <button id="btnSortZA">Sort Z/A</button>
 
-    <input id="txtSearch" type="Textbox" style="width:260px;" placeholder="Enter search term or blank to reset"/>
+    <input id="txtSearch" type="Textbox" style="width:190px;" placeholder="Enter search term"/>
     <button id="btnSearch">Search</button>
+    <button id="btnSearchClear">Show All</button>
+    <button id="btnAddMovie">Add Movie</button>
 </div>
 
 
-<main id="container"></main>
 
+<main id="container"></main>
+<h1 id="addEditTitle">Add A Movie</h1>
 <div id="myForm" class="formStyle">
     <form>
 
@@ -38,6 +41,10 @@
         <input type="Text" id="movieActors" placeholder = "Actors">
         <br>
         <br>
+        <input type="Text" id="movieImdbId" placeholder = "IMDB ID">
+        <br>
+        <br>
+
     </form>
     <input type="hidden" id="movieId">
     <button id="addMovie">Add the movie</button>

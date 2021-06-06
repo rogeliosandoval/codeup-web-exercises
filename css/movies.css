@@ -9,8 +9,8 @@ h1 {
 }
 
 h3 {
+    color: lightgray;
     text-align: center;
-    color: white;
 }
 
 p {
@@ -24,6 +24,30 @@ form {
     align-items: center;
     margin-top: 50px;
 }
+
+#btnSortAZ, #btnSortZA, #btnSearch, #btnSearchClear, #btnAddMovie {
+    background-color: rebeccapurple;
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid black;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 0px 16px 0 rebeccapurple
+}
+
+#btnSortAZ:hover, #btnSortZA:hover, #btnSearch:hover, #btnSearchClear:hover, #btnAddMovie:hover {
+    color: #ffffff !important;
+    background: rebeccapurple;
+    border-color: rebeccapurple !important;
+    transition: all 0.4s ease 0s;
+    box-shadow: 0 0px 16px 0 rebeccapurple,0 17px 50px 0 rebeccapurple;
+}
+
 /*visible on bottom of page*/
 #addMovie {
     background-color: lawngreen;
@@ -37,10 +61,20 @@ form {
     transition: all 0.3s ease-out;;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    box-shadow: 0 12px 16px 0 rgba(0,255,0,1),0 17px 50px 0 rgba(0,0,0,0.19);
+    /* offset-x, offset-y, blur-radius, spread-radius, color (change the second number 12 to a 0 to center the glow around the button)*/
+    box-shadow: 0 0px 16px 0px rgba(0,255,0,1);
+    margin-bottom:20px;
+}
+
+#addMovie:hover {
+    color: black !important;
+    background: lawngreen;
+    border-color: lawngreen !important;
+    transition: all 0.4s ease 0s;
+    box-shadow: 0 0px 16px 0 lawngreen,0 17px 50px 0 lawngreen;
 }
 /*button on bottom with fields... hidden*/
-#editMovie, .editB {
+#editMovie, .editB{
     background-color: orange;
     font-size: 1em;
     padding: 10px;
@@ -52,8 +86,32 @@ form {
     transition: all 0.3s ease-out;;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    box-shadow: 0 12px 16px 0 rgba(232,126,4,1),0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 0px 16px 0 rgba(232,126,4,1),0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
+#editMovie:hover, .editB:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    box-shadow: 0 0px 16px 0 #f6b93b,0 17px 50px 0 #f6b93b;
+}
+
+.detailsB{
+    background-color: dodgerblue;
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid black;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 0px 16px 0 rgba(30,144,255,1),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 /*button on bottom with fields... hidden*/
 #editMovieCancel, .deleteB {
     background-color: red;
@@ -68,18 +126,45 @@ form {
     transition: all 0.3s ease-out;;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    box-shadow: 0 12px 16px 0 rgba(255,0,0,1),0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 0px 16px 0 rgba(255,0,0,1),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-button {
-    background-color: yellowgreen;
+#editMovieCancel:hover, .deleteB:hover {
+    color: #ffffff !important;
+    background: darkred;
+    border-color: darkred !important;
+    transition: all 0.4s ease 0s;
+    box-shadow: 0 0px 16px 0 darkred,0 17px 50px 0 red;
+}
+
+.omdbDetails {
+    text-align:center;
+    color:white;
+    width:500px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+.detailsB:hover {
+    color: #ffffff !important;
+    background: dodgerblue;
+    border-color: dodgerblue !important;
+    transition: all 0.4s ease 0s;
+    box-shadow: 0 0px 16px 0 dodgerblue,0 17px 50px 0 dodgerblue;
+}
+
+.displayNone
+{
+    display:none;
 }
 
 hr {
     background-color: yellow;
     height: .5em;
     margin: 3em 200px;
-    box-shadow: 0 12px 16px 0 rgba(255,255,0,1),0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 0px 16px 0 rgba(255,255,0,1),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .formStyle
@@ -90,46 +175,8 @@ hr {
     text-align:center;
 }
 
-#btnSortAZ, #btnSortZA, #btnSearch {
-    background-color: yellow;
-    padding: 10px;
-    color: black;
-    border: 2px solid black;
-    border-radius: 20px/50px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease-out;;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    box-shadow: 0 12px 16px 0 rgba(232,126,4,1),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-#btnSortAZ:hover, #btnSortZA:hover, #btnSearch:hover, #editMovie:hover, .editB:hover {
-    color: #ffffff !important;
-    background: #f6b93b;
-    border-color: #f6b93b !important;
-    transition: all 0.4s ease 0s;
-    box-shadow: 0 12px 16px 0 #f6b93b,0 17px 50px 0 #f6b93b;
-}
-
-#editMovieCancel:hover, .deleteB:hover {
-    color: black !important;
-    background: darkred;
-    border-color: darkred !important;
-    transition: all 0.4s ease 0s;
-    box-shadow: 0 12px 16px 0 darkred,0 17px 50px 0 darkred;
-}
-
-#addMovie:hover {
-    color: #ffffff !important;
-    background: darkgreen;
-    border-color: darkgreen !important;
-    transition: all 0.4s ease 0s;
-    box-shadow: 0 12px 16px 0 darkgreen,0 17px 50px 0 darkgreen;
-}
-
 #txtSearch {
-    background: lightgoldenrodyellow;
+    background: #ffffff;
     border: 2px solid yellow;
     border-radius: 4px;
 }

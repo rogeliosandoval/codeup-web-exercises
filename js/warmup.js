@@ -95,7 +95,3 @@ function toLowerCase(x) {
 console.log(toLowerCase("I WANT THIS LOWER CASED PLEASE"));
 console.log(toLowerCase(myName));
 console.log(myString + myNameInCaps("Roger") + ".");
-
-
-
-
