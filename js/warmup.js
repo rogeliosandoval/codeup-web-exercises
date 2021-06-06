@@ -89,5 +89,13 @@ var myName = "Roger"
 
 console.log(myString + myName + ".");
 
+function toLowerCase(x) {
+    return x.toLowerCase();
+}
+console.log(toLowerCase("I WANT THIS LOWER CASED PLEASE"));
+console.log(toLowerCase(myName));
+console.log(myString + myNameInCaps("Roger") + ".");
+
+
 
 
