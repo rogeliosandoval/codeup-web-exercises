@@ -27,6 +27,8 @@
 //
 // console.log(addTo7());
 
+//Below is all personal practice
+
 function takesInANumberAndReturnsThePastNumberMultipliedByFive (num) {
     if (typeof num === "number") {
         return num * 5;
@@ -65,16 +67,27 @@ console.log(sayHello("Bill"));
 
 console.log("Hello my name is Roger!");
 
-var colors = ['red', 'blue', 'green', 'yellow'];
+var colors = ['red', 'blue', 'green', 'yellow', 'black'];
 
 let arrayLength = colors.length
 
 for(let i = 0; i < arrayLength; i++) {
     if (colors[i] === 'blue') {
-        colors[i] = "I'm blue if I was green I would die";
+        colors[i] = "I'm blue if I was green I would die!";
+    } else if (colors[i] === 'red'){
+        colors[i] = "Red like an apple!";
+    } else if (colors[i] === 'green'){
+        colors[i] = "Green like the grass!";
+    } else if (colors[i] === 'black'){
+        colors[i] = "Black like pepper!";
     }
     console.log(colors[i]);
 }
+
+var myString = "Hello this is my string and my name is ";
+var myName = "Roger"
+
+console.log(myString + myName + ".");
 
 
 
